@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style>
+  .login{
+    border: 5px blue solid;
+    padding-left: 40%;
+    padding-top: 150px;
+    height: 100vh;
+    background: rgb(255,241,64);
+    background: linear-gradient(90deg, rgba(255,241,64,1) 0%, rgba(78,228,99,1) 38%, rgba(0,212,255,1) 100%);
+  }
+  .url{
+    height: 40px;
+    width:200px;
+  }
+  .btn{
+    width: 80px;
+    height: 40px;
+  }
+  .predict{
+    border: 2px solid black;
+    width: 200px;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: large;
+    filter: brightness(200%);
+  }
+</style>
+  
+</head>
+
+<body>
+  <div>
+ <div class="login" >
+	
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="/predict" method="post" enctype="multipart/form-data"><h1>
+      <label for="url">Enter the url:&nbsp; &nbsp;</label><br>
+      <input type="text" name="url" placeholder="Url" class="url" required="required" /><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></h1>
+    </form><br>
+    
+  
+  
+
+   <br>
+   <br>
+   <h2>Type of Url</h2>
+   <div class="predict">
+    
+   {{ prediction_text }}
+  </div>
+
+ </div>
+</div>
+
+</body>
+</html>
